@@ -22,3 +22,11 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(1, 0)
+
+
+@pytest.mark.parametrize(
+    ("a", "b", "expected"),
+    [(2, 3, 5), (-2, 3, 1), (0, 0, 0), (-4, -6, -10)],
+)
+def test_add_regression_scrum_8(a, b, expected):
+    assert add(a, b) == expected
