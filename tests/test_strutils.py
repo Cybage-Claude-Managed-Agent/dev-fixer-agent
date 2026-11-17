@@ -1,0 +1,14 @@
+from src.strutils import slugify, truncate, word_count
+
+
+def test_slugify():
+    assert slugify("Hello World") == "hello-world"
+
+
+def test_truncate():
+    assert truncate("hello world", 5) == "hello..."
+    assert truncate("hi", 5) == "hi"
+
+
+def test_word_count():
+    assert word_count("one  two   three") == 3
