@@ -1,0 +1,2 @@
+# Internal packages: install ONLY from the internal index (ask the internal package API for it)
+cybage-units==1.0.0
